@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.shujito.simplenotes"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="21" />
+
+    <permission
+        android:name="org.shujito.simplenotes.provider"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name="org.shujito.simplenotes.SimpleNotesApplication"
+        android:allowBackup="true"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="@string/app_name" >
+        <provider
+            android:name="com.activeandroid.content.ContentProvider"
+            android:authorities="org.shujito.simplenotes"
+            android:exported="true"
+            android:permission="org.shujito.simplenotes.provider" >
+        </provider>
+    </application>
+
+</manifest>
